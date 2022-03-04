@@ -18,6 +18,7 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -50,7 +51,7 @@ section{
     text-align: center;
     font-size: 3rem;
     color:#fff;
-    padding:1rem;
+    padding:2.5rem;
     padding-top: 8.5rem;
     width:50rem;
     margin:0 auto;
@@ -162,6 +163,7 @@ header #menu{
 /* mobile */
 
 .mobile{
+    min-height: 100vh;
     background:#333;
     margin-bottom: 70px;
 }
@@ -255,168 +257,151 @@ header #menu{
     padding:1rem .5rem;
 }
 
+
+/* coding */
+
 .coding{
-    min-height: 73vh;
-    background: #AFAFAF;
+    min-height: 100vh;
+    background: rgb(175, 175, 175);
 }
 
-.coding .box-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.coding .myslider{
+    width: 1000px;
+    margin: auto;
 }
 
-.coding .box-container .box{
-    margin:1.5rem;
-    padding:1rem;
-    width:50rem;
-    background:#333;
-    box-shadow: 0 0 1rem rgba(0,0,0,.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.coding .box-container .box .image{
-    padding:1rem;
-}
-
-.coding .box-container .box .image img{
-    padding:0 3rem;
-    width:20rem;
-    border-right: .1rem solid #ccc;
-}
-
-.coding .box-container .box .home-content{
-    padding:1rem;
-}
-
-.coding .box-container .box .home-content h3{
-    font-size: 3rem;
-    color:#fff;
-}
-
-.coding .box-container .box .home-content p{
-    font-size: 1.3rem;
-    color:#eee;
-    padding:1rem 0;
-}
-
-.coding .box-container .box .home-content .price{
-    font-size: 3rem;
-    color:#fff;
-}
-
-
-/* tab */
-.container{
-    max-width: 950px;
-    width: 100%;
-    height: 50%;
-    padding: 40px 50px  40px  40px;
-    background: #fff;
-    margin: 0 200px;
-    border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  /* .container .topic{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 20px;
-  } */
-  .content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .content .list{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin-right: 50px;
-    position: relative;
-  }
-  .content .list label{
-    height: 60px;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 60px;
-    cursor: pointer;
-    padding-left: 25px;
-    transition: all 0.5s ease;
-    color: #333;
-    z-index: 12;
-  }
-  #home:checked ~ .list label.home,
-  #blog:checked ~ .list label.blog,
-  #help:checked ~ .list label.help,
-  #code:checked ~ .list label.code,
-  #about:checked ~ .list label.about{
+.coding .myslider > div{
+    /* margin-top: 20px; */
+    height: 180px;
     color: #fff;
-  }
-  .content .list label:hover{
-    color: #6d50e2;
-  }
-  .content .slider{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 60px;
+    background: #fff;
+    opacity: 0.7;
+}
+
+.coding .myslider > div img{
     width: 100%;
-    border-radius: 12px;
-    background: #6d50e2;
-    transition: all 0.4s ease;
-  }
-  #home:checked ~ .list .slider{
-    top: 0;
-  }
-  #blog:checked ~ .list .slider{
-    top: 60px;
-  }
-  #help:checked ~ .list .slider{
-    top: 120px;
-  }
-  #code:checked ~ .list .slider{
-    top: 180px;
-  }
-  #about:checked ~ .list .slider{
-    top: 240px;
-  }
-  .content .text-content{
-    width: 80%;
     height: 100%;
-  }
-  .content .text{
-    display: none;
-  }
-  .content .text .title{
-    font-size: 25px;
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  .content .text p{
-    text-align: justify;
-  }
-  .content .text-content .home{
-    display: block;
-  }
-  #home:checked ~ .text-content .home,
-  #blog:checked ~ .text-content .blog,
-  #help:checked ~ .text-content .help,
-  #code:checked ~ .text-content .code,
-  #about:checked ~ .text-content .about{
-    display: block;
-  }
-  #blog:checked ~ .text-content .home,
-  #help:checked ~ .text-content .home,
-  #code:checked ~ .text-content .home,
-  #about:checked ~ .text-content .home{
-    display: none;
-  }
-  .content input{
-    display: none;
-  }
+}
+.coding .myslider > div img:hover{
+    transform: scale(1.2);
+}
+
+.coding .myslider > div:hover{
+    opacity: 1;
+}
+
+/* web publishing */
+.web{
+    min-height: 100vh;
+}
+
+.tabs{
+    position: relative;
+    top: 100%;
+    left: 12%;
+    width: 1000px;
+    height: 510px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: rgb(204 204 204) 2px 2px 5px 2px;
+    display: flex;
+}
+
+.tabs .tab-header {
+    width: 130px;
+    height: 100%;
+}
+
+.tabs .tab-header > div{
+    width: 100%;
+    height: calc(100% / 4);
+    background: #fff;
+    text-indent: 20px;
+    color: #888;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    border-left: 5px solid #ddd;
+    cursor: pointer;
+    transform: all 200ms ease-in-out;
+}
+
+.tabs .tab-header > div.active{
+    border-left: 5px solid rgb(160, 139, 249);
+    color: rgb(160, 139, 249);
+    background: #eee;
+}
+
+.tabs .tab-content{
+    padding: 20px 30px;
+    flex: 1;
+    position: relative;
+}
+
+.tabs .tab-content > div{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out 0ms,
+                left 300ms ease-in-out 0ms,
+                top 0ms ease-in-out 3000ms;
+}
+
+.tabs .tab-content > div.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 0;
+    left: 20px;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out 0ms,
+                left 300ms ease-in-out 0ms,
+                top 0ms ease-in-out 0ms;
+}
+
+.tabs .tab-content > div.active h1{
+    font-size: 500;
+    font-size: 3rem;
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+
+
+.tabs .tab-content > div.active .tab-content-text{
+    display: flex;
+    height: 180px;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+.tabs .tab-content > div.active  .tab-content-text .tab-btn{
+    background: #fff;
+    color: #333;
+    border: #fff;
+    margin-top: 10px;
+}
+
+.tabs .tab-content > div.active  .tab-content-text .tab-btn:hover{
+    background: #333;
+    color: #fff;
+    margin-top: 10px;
+    border: #fff;
+}
+
+
+.tabs .tab-content > div.active img {
+    width: 30%;
+    height: 20%;
+    margin: 30px 40px;
+}
+
 
 
 
