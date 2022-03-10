@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,300&family=Luxurious+Roman&family=Oswald:wght@200;400&family=Roboto:ital,wght@1,100;1,900&family=Zen+Kurenaido&display=swap');
 
+
 *{
     font-family: 'Jost', sans-serif;
     margin:0; padding:0;
@@ -18,7 +19,7 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 body{
@@ -29,19 +30,18 @@ section{
     padding:0 7%;
 }
 
-.btn{
+.btn {
     position: relative;
     top: 20px;
-    left: 350px;
-    padding: 0.6rem 3rem;
+    left: 300px;
+    padding: 0.3rem 2rem;
     font-size: 1.5rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     cursor: pointer;
     border: none;
-    background: var(--gradient);
+    background: #333;
     color: #fff;
 }
-
 .btn:hover{
     background:#fff;
     color:#333;
@@ -57,6 +57,13 @@ section{
     margin:0 auto;
 }
 
+.eheading {
+    font-size: 3rem;
+    color: #fff;
+    padding: 2rem;
+    width: 50rem;
+}
+
 header{
     width:100%;
     display: flex;
@@ -64,7 +71,7 @@ header{
     justify-content: space-between;
     position: fixed;
     top:0; left: 0;
-    background:var(--gradient);
+    background: none;
     z-index: 1000;
     padding:2rem 7%;
 }
@@ -135,14 +142,16 @@ header #menu{
     text-align: center;
 }
 
-.home .image img{
-    height:70vh;
+.home .image img {
+    height: 70vh;
     padding-top: 4rem;
+    margin-left: 6rem;
 }
 
-.home .home-content{
-    padding:1rem;
-    flex:1 1 40rem;
+.home .home-content {
+    padding: 1rem;
+    flex: 1 1 40rem;
+    margin-left: 5rem;
 }
 
 .home .home-content h1{
@@ -160,48 +169,49 @@ header #menu{
     padding:1rem 0;
 }
 
-/* mobile */
+/* web */
 
-.mobile{
+.web{
     min-height: 100vh;
     background:#333;
     margin-bottom: 70px;
 }
 
-.mobile .row{
+.web .row{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.mobile .row .image{
-    flex:1 1 45rem;
-    text-align: center;
+.web .row .image {
+    position: relative;
+    top: 50px;
+    left: 15%;
+    padding-bottom: 7rem;
+}
+.web .row .image img {
+    width: 40%;
+    border-radius: 2rem;
 }
 
-.mobile .row .image img{
-    width:70%;
-    border-radius: .5rem;
+.web .row .home-content {
+    padding-bottom: 2rem;
+    padding-left: 10rem;
 }
 
-.mobile .row .home-content{
-    flex:1 1 45rem;
-    padding: 2.5rem;
-}
-
-.mobile .row .home-content h1{
+.web .row .home-content h1{
     font-size: 2.5rem;
     color:#fff;
 }
 
-.mobile .row .home-content p{
-    font-size: 1.8rem;
-    color:#eee;
-    padding:1rem 0;
+.web .row .home-content p {
+    font-size: 1.2rem;
+    color: #eee;
+    padding: 1rem 0;
 }
 
-.mobile .row .home-content p i{
+.web .row .home-content p i{
     padding-right: .5rem;
     color:#637CBB;
 }
@@ -220,6 +230,7 @@ header #menu{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .skill  .box-container .box{
@@ -231,7 +242,7 @@ header #menu{
 }
 
 .skill  .box-container .box:hover{
-    background:var(--gradient);
+    background:rgb(160, 139, 249);
 }
 
 .skill  .box-container .box i{
@@ -260,14 +271,16 @@ header #menu{
 
 /* coding */
 
-.coding{
+.coding {
     min-height: 100vh;
-    background: rgb(175, 175, 175);
+    background: #AFAFAF;
+    padding-bottom: 80px;
 }
 
-.coding .myslider{
-    width: 1000px;
+.coding .myslider {
+    width: 1120px;
     margin: auto;
+    padding-bottom: 1rem;
 }
 
 .coding .myslider > div{
@@ -275,7 +288,7 @@ header #menu{
     height: 180px;
     color: #fff;
     background: #fff;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .coding .myslider > div img{
@@ -290,119 +303,51 @@ header #menu{
     opacity: 1;
 }
 
-/* web publishing */
-.web{
-    min-height: 100vh;
-}
 
-.tabs{
-    position: relative;
-    top: 100%;
-    left: 12%;
-    width: 1000px;
-    height: 510px;
-    background: #fff;
-    overflow: hidden;
-    box-shadow: rgb(204 204 204) 2px 2px 5px 2px;
-    display: flex;
-}
-
-.tabs .tab-header {
-    width: 130px;
-    height: 100%;
-}
-
-.tabs .tab-header > div{
-    width: 100%;
-    height: calc(100% / 4);
-    background: #fff;
-    text-indent: 20px;
-    color: #888;
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    border-left: 5px solid #ddd;
-    cursor: pointer;
-    transform: all 200ms ease-in-out;
-}
-
-.tabs .tab-header > div.active{
-    border-left: 5px solid rgb(160, 139, 249);
-    color: rgb(160, 139, 249);
-    background: #eee;
-}
-
-.tabs .tab-content{
-    padding: 20px 30px;
-    flex: 1;
+/* slider-arrow */
+.myslider{
     position: relative;
 }
 
-.tabs .tab-content > div{
+.myslider .prev-arrow {
     position: absolute;
-    top: 50px;
-    left: 100px;
-    opacity: 0;
-    transition: opacity 200ms ease-in-out 0ms,
-                left 300ms ease-in-out 0ms,
-                top 0ms ease-in-out 3000ms;
-}
-
-.tabs .tab-content > div.active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    top: 0;
-    left: 20px;
-    opacity: 1;
-    transition: opacity 200ms ease-in-out 0ms,
-                left 300ms ease-in-out 0ms,
-                top 0ms ease-in-out 0ms;
-}
-
-.tabs .tab-content > div.active h1{
-    font-size: 500;
-    font-size: 3rem;
-    position: relative;
-    top: 10px;
-    left: 50px;
-}
-
-
-.tabs .tab-content > div.active .tab-content-text{
-    display: flex;
-    height: 180px;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-    line-height: 25px;
-}
-
-.tabs .tab-content > div.active  .tab-content-text .tab-btn{
-    background: #fff;
-    color: #333;
-    border: #fff;
-    margin-top: 10px;
-}
-
-.tabs .tab-content > div.active  .tab-content-text .tab-btn:hover{
-    background: #333;
+    top: 45%;
+    left: -35px;
     color: #fff;
-    margin-top: 10px;
-    border: #fff;
+    /* width: 100%; */
+    /* height: 100px; */
+    /* line-height: 50px; */
+    cursor: pointer;
+    /* font-weight: 500; */
+    z-index: 111;
 }
 
-
-.tabs .tab-content > div.active img {
-    width: 30%;
-    height: 20%;
-    margin: 30px 40px;
+.myslider .next-arrow{
+    position: absolute;
+    top: 40%;
+    right: -80px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 111;
 }
 
-
+.etitle{
+    font-size: 1.5rem;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.etitle span{
+    color: #A08BF9;
+}  
+.etext{
+    padding-bottom: 50px;
+    font-size: 0.5rem;
+    font-weight: 300;
+    color: #fff;
+}
 
 
 
@@ -437,7 +382,7 @@ header #menu{
 
     header .navbar ul li a{
         display: block;
-        background:var(--gradient);
+        background:rgb(160, 139, 249);
         margin:1rem 0;
         padding:1rem;
         font-size: 2.5rem;
@@ -456,19 +401,62 @@ header #menu{
     }
 
     header .navbar.nav-toggle{
-        top:7.4rem;
+        top: 7.4rem;
+    }
+
+    .home .home-content p {
+        padding: 10rem 0;
     }
 
     .home .home-content{
         text-align: center;
     }
 
-    .core .row .image{
+    .home .home-content h1 {
+        padding-top: 10rem;
+    }
+
+    .home .image {
+        text-align: center;
+    }
+
+    .home .image img {
         display: none;
     }
-    
-    .contact .home-content{
-        padding:3rem 0;
+
+    .coding {
+        padding-bottom: 5rem;
+    }
+
+    .coding .myslider {
+        width: 300px;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+
+    .coding .myslider > div img {
+        width: 100%;
+    }
+
+    .skill .box-container {
+        margin-bottom: 3rem;
+        padding-bottom: 100px;
+    }
+
+    .etitle {
+        padding: 10px 5px;
+    }
+
+    .etext {
+        padding: 30px 1.5em;
+        font-size: 0.5rem;
+    }
+
+    .web .row .image {
+        position: relative;
+        top: 50px;
+        left: 13%;
+        padding-bottom: 12rem;
     }
 
 }
@@ -479,17 +467,33 @@ header #menu{
         font-size: 50%;
     }
 
-    .home .home-content h1{
-        font-size: 4rem;
+    .home .home-content h1 {
+        font-size: 3.5rem;
+        margin-right: 4rem;
+        padding-top: 15rem;
+    }
+    
+    .home .home-content p {
+        font-size: 1.5rem;
+        margin-right: 4rem;
+        word-break: keep-all;
     }
 
-    .home .image img{
-        height:auto;
-        width:90%;
+    .home .image img {
+        display: none;
+        /* height: 50vh;
+        padding: 1.5rem;
+        margin-bottom: 4rem;
+        padding-right: 4rem;
+        margin-right: 4rem; */
     }
 
     .heading{
         width: auto;
+    }
+
+    .coding {
+        padding-bottom: 50px;
     }
 
     .coding .box-container .box{
@@ -500,5 +504,61 @@ header #menu{
         width:85%;
         border:none;
     }
+
+    .coding .myslider > div img {
+        width: 100%;
+    }
+
+    .coding .myslider {
+        width: 300px;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+
+    .web .row .image {
+        position: relative;
+        top: 50px;
+        left: 19%;
+        padding-bottom: 15rem;
+    }
+
+    .web .row .image img {
+        width: 60%;
+    }
+    .btn {
+        position: relative;
+        top: 20px;
+        left: 3px;
+        padding: 0.3rem 2rem;
+        font-size: 1.5rem;
+        margin-top: 4rem;
+        cursor: pointer;
+        border: none;
+        background: #fff;
+        color: #333;
+    }
+
+    .btn:hover{
+        background:#333;
+        color:#fff;
+    }
+    
+    .skill .box-container {
+    margin-bottom: 30px;
+    
+    }
+
+    .etitle {
+    font-size: 2rem;
+    padding: 2rem 1rem;
+  
+    }
+    .etext {
+        font-size: 1.5rem;
+        padding: 2rem 1rem;
+        margin-bottom: 4rem;
+    }
+    
+    
 
 }
