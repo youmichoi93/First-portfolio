@@ -19,7 +19,6 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
-    /* scroll-behavior: smooth; */
 }
 
 body{
@@ -30,18 +29,18 @@ section{
     padding:0 7%;
 }
 
-.btn {
+.btn{
     position: relative;
     top: 20px;
-    left: 300px;
+    left: 65px;
     padding: 0.3rem 2rem;
     font-size: 1.5rem;
-    /* margin-top: 1rem; */
     cursor: pointer;
     border: none;
     background: #333;
     color: #fff;
 }
+
 .btn:hover{
     background:#fff;
     color:#333;
@@ -57,7 +56,7 @@ section{
     margin:0 auto;
 }
 
-.eheading {
+.eheading{
     font-size: 3rem;
     color: #fff;
     padding: 2rem;
@@ -81,7 +80,7 @@ header .logo{
     color:#fff;
 }
 
-header .logo img {
+header .logo img{
     position: relative;
     max-width: 70px;
 }
@@ -123,6 +122,8 @@ header #menu{
     display: none;
 }
 
+
+/* home */
 .home{
     min-height: 100vh;
     display: flex;
@@ -142,13 +143,13 @@ header #menu{
     text-align: center;
 }
 
-.home .image img {
+.home .image img{
     height: 70vh;
     padding-top: 4rem;
     margin-left: 6rem;
 }
 
-.home .home-content {
+.home .home-content{
     padding: 1rem;
     flex: 1 1 40rem;
     margin-left: 5rem;
@@ -170,7 +171,6 @@ header #menu{
 }
 
 /* web */
-
 .web{
     min-height: 100vh;
     background:#333;
@@ -184,18 +184,19 @@ header #menu{
     flex-wrap: wrap;
 }
 
-.web .row .image {
+.web .row .image{
     position: relative;
     top: 50px;
     left: 15%;
     padding-bottom: 7rem;
 }
-.web .row .image img {
+
+.web .row .image img{
     width: 40%;
     border-radius: 2rem;
 }
 
-.web .row .home-content {
+.web .row .home-content{
     padding-bottom: 2rem;
     padding-left: 10rem;
 }
@@ -205,7 +206,7 @@ header #menu{
     color:#fff;
 }
 
-.web .row .home-content p {
+.web .row .home-content p{
     font-size: 1.2rem;
     color: #eee;
     padding: 1rem 0;
@@ -219,7 +220,6 @@ header #menu{
 
 
 /* skill */
-
 .skill {
     min-height: 100vh;
     background: rgb(175, 175, 175);
@@ -270,21 +270,19 @@ header #menu{
 
 
 /* coding */
-
-.coding {
+.coding{
     min-height: 100vh;
     background: #AFAFAF;
     padding-bottom: 80px;
 }
 
-.coding .myslider {
+.coding .myslider{
     width: 1120px;
     margin: auto;
     padding-bottom: 1rem;
 }
 
 .coding .myslider > div{
-    /* margin-top: 20px; */
     height: 180px;
     color: #fff;
     background: #fff;
@@ -309,16 +307,12 @@ header #menu{
     position: relative;
 }
 
-.myslider .prev-arrow {
+.myslider .prev-arrow{
     position: absolute;
     top: 45%;
     left: -35px;
     color: #fff;
-    /* width: 100%; */
-    /* height: 100px; */
-    /* line-height: 50px; */
     cursor: pointer;
-    /* font-weight: 500; */
     z-index: 111;
 }
 
@@ -339,9 +333,11 @@ header #menu{
     color: #fff;
     padding-bottom: 10px;
 }
+
 .etitle span{
     color: #A08BF9;
 }  
+
 .etext{
     padding-bottom: 50px;
     font-size: 0.5rem;
@@ -352,9 +348,7 @@ header #menu{
 
 
 /* media queries  */
-
 @media (max-width:768px){
-
     html{
         font-size: 55%;
     }
@@ -404,7 +398,7 @@ header #menu{
         top: 7.4rem;
     }
 
-    .home .home-content p {
+    .home .home-content p{
         padding: 10rem 0;
     }
 
@@ -412,87 +406,80 @@ header #menu{
         text-align: center;
     }
 
-    .home .home-content h1 {
+    .home .home-content h1{
         padding-top: 10rem;
     }
 
-    .home .image {
+    .home .image{
         text-align: center;
     }
 
-    .home .image img {
+    .home .image img{
         display: none;
     }
 
-    .coding {
+    .coding{
         padding-bottom: 5rem;
     }
 
-    .coding .myslider {
+    .coding .myslider{
         width: 300px;
         margin: auto;
         margin-bottom: 1rem;
     }
 
-    .coding .myslider > div img {
+    .coding .myslider > div img{
         width: 100%;
     }
 
-    .skill .box-container {
+    .skill .box-container{
         margin-bottom: 3rem;
         padding-bottom: 100px;
     }
 
-    .etitle {
+    .etitle{
         padding: 10px 5px;
     }
 
-    .etext {
+    .etext{
         padding: 30px 1.5em;
         font-size: 0.5rem;
     }
 
-    .web .row .image {
+    .web .row .image{
         position: relative;
         top: 50px;
         left: 13%;
         padding-bottom: 12rem;
     }
-
 }
 
 @media (max-width:500px){
-
     html{
         font-size: 50%;
     }
 
-    .home .home-content h1 {
+    .home .home-content h1{
         font-size: 3.5rem;
         margin-right: 4rem;
         padding-top: 15rem;
     }
     
-    .home .home-content p {
+    .home .home-content p{
         font-size: 1.5rem;
         margin-right: 4rem;
         word-break: keep-all;
     }
 
-    .home .image img {
+    .home .image img{
         display: none;
-        /* height: 50vh;
-        padding: 1.5rem;
-        margin-bottom: 4rem;
-        padding-right: 4rem;
-        margin-right: 4rem; */
     }
 
     .heading{
         width: auto;
     }
 
-    .coding {
+    .coding{
         padding-bottom: 50px;
     }
 
@@ -505,27 +492,28 @@ header #menu{
         border:none;
     }
 
-    .coding .myslider > div img {
+    .coding .myslider > div img{
         width: 100%;
     }
 
-    .coding .myslider {
+    .coding .myslider{
         width: 300px;
         margin: auto;
         margin-bottom: 1rem;
     }
 
-    .web .row .image {
+    .web .row .image{
         position: relative;
         top: 50px;
         left: 19%;
         padding-bottom: 15rem;
     }
 
-    .web .row .image img {
+    .web .row .image img{
         width: 60%;
     }
-    .btn {
+
+    .btn{
         position: relative;
         top: 20px;
         left: 3px;
@@ -543,22 +531,19 @@ header #menu{
         color:#fff;
     }
     
-    .skill .box-container {
+    .skill .box-container{
     margin-bottom: 30px;
     
     }
 
-    .etitle {
+    .etitle{
     font-size: 2rem;
     padding: 2rem 1rem;
   
     }
-    .etext {
+    .etext{
         font-size: 1.5rem;
         padding: 2rem 1rem;
         margin-bottom: 4rem;
     }
-    
-    
-
 }
