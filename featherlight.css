@@ -1,17 +1,17 @@
-.featherlight .featherlight-content {
+.featherlight .featherlight-content{
   margin-left: 0;
   max-height: 100%;
   width: 100%;
   height: 100%;
 }
   
-.featherlight iframe {
+.featherlight iframe{
   border: none;
   width: 100%;
   height: 100%;
 }
 
-.featherlight .featherlight-close-icon {
+.featherlight .featherlight-close-icon{
   position: absolute;
   z-index: 9999;
   top: 45px;
